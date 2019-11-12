@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import view.FrmPerson;
+import view.FrmPersonView;
 import view.factory.PersonViewFactory;
 
 /**
@@ -63,11 +65,12 @@ public class AdvancedPersonViewFactory extends PersonViewFactory{
 
     @Override
     public void createPanel() {
-        main.add(getPersonView());
+         panel = new FrmPersonView(getPersonView());
     }
 
     @Override
     public void showForm() {
+        main.add(panel);
          main.pack();
         main.setVisible(true);
     }

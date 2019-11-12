@@ -15,7 +15,8 @@ import javax.swing.JPanel;
 public abstract class PersonViewFactory {
 
     protected JFrame main;
-
+    protected JPanel panel;
+    
     public abstract JPanel getPersonView();
 
     public abstract void createMainFrame();

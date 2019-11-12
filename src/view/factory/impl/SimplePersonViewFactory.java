@@ -9,6 +9,7 @@ import components.fields.PanelInputTextField;
 import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import view.FrmPersonView;
 import view.factory.PersonViewFactory;
 
 /**
@@ -50,7 +51,7 @@ public class SimplePersonViewFactory extends PersonViewFactory{
 
     @Override
     public void createPanel() {
-        main.add(getPersonView());
+         panel = new FrmPersonView(getPersonView());
     }
 
     @Override
